@@ -1,0 +1,82 @@
+@import "tailwindcss";
+
+@theme {
+  --color-primary: #3b82f6;
+  --color-secondary: #8b5cf6;
+  --color-accent: #f59e0b;
+  --color-dark: #1f2937;
+  --color-darker: #111827;
+  --color-light: #f9fafb;
+}
+
+
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+  
+  body {
+    @apply bg-gradient-to-br from-darker to-dark text-light;
+  }
+}
+
+@layer components {
+  .btn {
+    @apply inline-block px-8 py-3 bg-primary text-white font-semibold rounded-lg transition-all duration-300 hover:bg-primary/90 hover:-translate-y-1 hover:shadow-lg hover:shadow-primary/30;
+  }
+  
+  .btn-outline {
+    @apply bg-transparent border-2 border-primary text-primary hover:bg-primary hover:text-white;
+  }
+  
+  .section-title {
+    @apply text-center mb-16;
+  }
+  
+  .section-title h2 {
+    @apply text-4xl font-bold mb-4 relative inline-block;
+  }
+  
+  .section-title h2::after {
+    content: '';
+    @apply absolute -bottom-3 left-1/2 transform -translate-x-1/2 w-20 h-1 bg-primary rounded;
+  }
+  
+  .section-title p {
+    @apply text-light/70 max-w-2xl mx-auto;
+  }
+}
+
+/* Scroll animation classes */
+.scroll-fade-in {
+  @apply opacity-0 translate-y-8 transition-all duration-700;
+}
+
+.scroll-fade-in.visible {
+  @apply opacity-100 translate-y-0;
+}
+
+.scroll-slide-left {
+  @apply opacity-0 -translate-x-12 transition-all duration-700;
+}
+
+.scroll-slide-left.visible {
+  @apply opacity-100 translate-x-0;
+}
+
+.scroll-slide-right {
+  @apply opacity-0 translate-x-12 transition-all duration-700;
+}
+
+.scroll-slide-right.visible {
+  @apply opacity-100 translate-x-0;
+}
+
+.scroll-scale {
+  @apply opacity-0 scale-95 transition-all duration-700;
+}
+
+.scroll-scale.visible {
+  @apply opacity-100 scale-100;
+}
