@@ -39,7 +39,7 @@ const About = () => {
             </h3>
 
             <p className="text-light/80 text-lg leading-relaxed">
-              {"I'm a passionate full-stack developer with over 5 years of experience creating innovative web solutions. My expertise spans frontend and backend technologies with a strong focus on building immersive 3D web experiences."}
+              {"I'm a passionate full-stack developer with over 3 years of experience creating innovative web solutions. My expertise spans frontend and backend technologies with a strong focus on building immersive 3D web experiences."}
             </p>
 
             <p className="text-light/80 text-lg leading-relaxed">
