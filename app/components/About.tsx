@@ -3,7 +3,7 @@ import ScrollAnimation from './ScrollAnimation'
 
 const About = () => {
   const skills = [
-    'JavaScript', 'Three.js', 'React/Next.js', 'TypeScript', 
+    'JavaScript', 'Three.js', 'React/Next.js', 'TypeScript',
     'Node.js', 'WebGL', 'Tailwind CSS', 'Python'
   ]
 
@@ -28,18 +28,19 @@ const About = () => {
           <ScrollAnimation animation="slide-left" className="space-y-6">
             <h3 className="text-3xl font-bold text-light">Creating Digital Magic</h3>
             <p className="text-light/80 text-lg leading-relaxed">
-              I'm a passionate full-stack developer with over 5 years of experience creating 
-              innovative web solutions. My expertise spans frontend and backend technologies, 
+              I&apos;m a passionate full-stack developer with over 5 years of experience creating
+              innovative web solutions. My expertise spans frontend and backend technologies,
               with a special focus on creating immersive 3D experiences.
             </p>
+
             <p className="text-light/80 text-lg leading-relaxed">
-              I believe in the power of technology to transform ideas into reality, and I'm 
-              constantly exploring new ways to push the boundaries of what's possible on the web.
+              I believe in the power of technology to transform ideas into reality, and I&apos;m
+              constantly exploring new ways to push the boundaries of what&apos;s possible on the web.
             </p>
-            
+
             <div className="flex flex-wrap gap-3 pt-4">
               {skills.map((skill) => (
-                <span 
+                <span
                   key={skill}
                   className="px-4 py-2 bg-primary/10 text-primary border border-primary/30 rounded-full text-sm font-medium"
                 >
@@ -60,7 +61,7 @@ const About = () => {
                       <span className="text-primary font-semibold">{item.level}%</span>
                     </div>
                     <div className="w-full bg-light/10 rounded-full h-2">
-                      <div 
+                      <div
                         className="bg-gradient-to-r from-primary to-secondary h-2 rounded-full transition-all duration-1000 ease-out"
                         style={{ width: `${item.level}%` }}
                       ></div>
