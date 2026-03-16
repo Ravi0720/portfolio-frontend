@@ -50,14 +50,19 @@ const Hero = () => {
           className="lg:w-1/2 w-full flex flex-col items-center lg:items-start cursor-pointer"
         >
           <ScrollAnimation animation="slide-right" delay={200}>
-            <h1 className="text-5xl md:text-6xl lg:text-7xl font-bold text-light mb-6 leading-tight text-center lg:text-left">
-              Hi, I&apos;m <span className="text-primary">Ravi Shankar</span>
-              <br />
-              <span className="text-3xl md:text-4xl lg:text-5xl bg-gradient-to-r from-primary to-secondary bg-clip-text text-transparent">
+            <h1 className="text-5xl md:text-6xl lg:text-7xl font-bold text-light leading-tight text-center lg:text-left">
+
+              <span className="block mb-3">
+                Hi, I&apos;m <span className="text-primary">Ravi Shankar</span>
+              </span>
+
+              <span className="block text-3xl md:text-4xl lg:text-5xl font-semibold bg-gradient-to-r from-primary via-purple-400 to-secondary bg-clip-text text-transparent">
                 Creative Developer
               </span>
+
             </h1>
-          </ScrollAnimation>
+          </ScrollAnimation><br />
+
           <ScrollAnimation animation="fade-in" delay={400}>
             <p className="text-xl text-light/80 mb-8 leading-relaxed text-center lg:text-left">
               I create immersive digital experiences with cutting-edge technologies
@@ -83,7 +88,7 @@ const Hero = () => {
           </div>
         </div>
       </div>
-    </section>
+    </section >
   )
 }
 
