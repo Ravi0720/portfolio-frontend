@@ -2,8 +2,8 @@
 
 import { useEffect, useRef } from 'react'
 import * as THREE from 'three'
-import { GLTFLoader } from 'three/examples/jsm/loaders/GLTFLoader.js'
-import { OrbitControls } from 'three/examples/jsm/controls/OrbitControls.js'
+import { GLTFLoader } from 'three/examples/jsm/loaders/GLTFLoader'
+import { OrbitControls } from 'three/examples/jsm/controls/OrbitControls'
 
 const Dragon = () => {
   const mountRef = useRef<HTMLDivElement | null>(null)
@@ -64,7 +64,7 @@ const Dragon = () => {
       '/model_Animation_Walking_withSkin.glb',
       (gltf) => {
         dragonModel = gltf.scene
-        dragonModel.scale.set(10000, 10000, 10000)
+        dragonModel.scale.set(1000, 1000, 1000)
 
         scene.add(dragonModel)
 
@@ -77,7 +77,8 @@ const Dragon = () => {
         const maxDim = Math.max(size.x, size.y, size.z)
         const fov = camera.fov * (Math.PI / 180)
 
-        const cameraZ = Math.abs(maxDim / (2 * Math.tan(fov / 2))) * 1.2
+        const cameraZ =
+          Math.abs(maxDim / (2 * Math.tan(fov / 2))) * 1.2
 
         camera.position.set(0, 2, cameraZ)
         camera.lookAt(0, 0, 0)
@@ -98,8 +99,6 @@ const Dragon = () => {
     const clock = new THREE.Clock()
 
     const animate = () => {
-      requestAnimationFrame(animate)
-
       const delta = clock.getDelta()
 
       if (mixer) mixer.update(delta)
@@ -126,6 +125,8 @@ const Dragon = () => {
 
       controls.update()
       renderer.render(scene, camera)
+
+      requestAnimationFrame(animate)
     }
 
     animate()
