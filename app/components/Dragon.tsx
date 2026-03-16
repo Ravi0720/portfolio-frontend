@@ -64,7 +64,7 @@ const Dragon = () => {
       '/model_Animation_Walking_withSkin.glb',
       (gltf) => {
         dragonModel = gltf.scene
-        dragonModel.scale.set(1000, 1000, 1000)
+        dragonModel.scale.set(10000, 10000, 10000)
 
         scene.add(dragonModel)
 
